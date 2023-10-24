@@ -47,7 +47,6 @@ function getUnexpectedStateShapeWarningMessage(
     unexpectedKeyCache[key] = true
   })
 
-  if (action && action.type === ActionTypes.REPLACE) return
 
 }
 
