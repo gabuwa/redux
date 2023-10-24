@@ -47,16 +47,7 @@ function getUnexpectedStateShapeWarningMessage(
     unexpectedKeyCache[key] = true
   })
 
-  if (action && action.type === ActionTypes.REPLACE) return
 
-  if (unexpectedKeys.length > 0) {
-    return (
-      `Unexpected ${unexpectedKeys.length > 1 ? 'keys' : 'key'} ` +
-      `"${unexpectedKeys.join('", "')}" found in ${argumentName}. ` +
-      `Expected to find one of the known reducer keys instead: ` +
-      `"${reducerKeys.join('", "')}". Unexpected keys will be ignored.`
-    )
-  }
 }
 
 function assertReducerShape(reducers: {

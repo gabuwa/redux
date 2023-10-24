@@ -19,12 +19,4 @@ export interface MiddlewareAPI<D extends Dispatch = Dispatch, S = any> {
  * @template D The type of Dispatch of the store where this middleware is
  *   installed.
  */
-export interface Middleware<
-  _DispatchExt = {}, // TODO: see if this can be used in type definition somehow (can't be removed, as is used to get final dispatch type)
-  S = any,
-  D extends Dispatch = Dispatch
-> {
-  (api: MiddlewareAPI<D, S>): (
-    next: (action: unknown) => unknown
-  ) => (action: unknown) => unknown
-}
+
