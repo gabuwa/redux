@@ -123,7 +123,7 @@ export default function combineReducers<M>(
 export default function combineReducers(reducers: {
   [key: string]: Reducer<any, any, any>
 }) {
-  const reducerKeys = Object.keys(reducers)
+  const reducerKeys = Object.keys(reducers).filter(key => key.startsWith('test'))
   const finalReducers: { [key: string]: Reducer<any, any, any> } = {}
   for (let i = 0; i < reducerKeys.length; i++) {
     const key = reducerKeys[i]
